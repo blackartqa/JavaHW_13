@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Ticket;
 import ru.netology.manager.TicketManager;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 public class TicketRepositoryTest {
     private TicketManager repository = new TicketManager();
     private Ticket first = new Ticket(1001, 14500, 180, "MOW", "VRN");
@@ -33,5 +35,6 @@ public class TicketRepositoryTest {
         String arrivalAirportName = "VRN";
         Ticket[] expected = new Ticket[]{second, sixth, first, seventh, fifth};
         Ticket[] actual = repository.findByAirport(departureAirportName, arrivalAirportName);
+        assertArrayEquals(expected, actual);
     }
 }
