@@ -16,7 +16,8 @@ public class TicketTest {
     private Ticket sixth = new Ticket(1006, 12500, 150, "MOW", "VRN");
     private Ticket seventh = new Ticket(1007, 14500, 180, "MOW", "VRN");
 
-    @Test public void shouldSortByPrice(){
+    @Test
+    public void shouldSortByPrice() {
         Ticket[] expected = new Ticket[]{second, sixth, first, seventh, fifth, third, forth};
         Ticket[] actual = new Ticket[]{first, second, third, forth, fifth, sixth, seventh};
         Arrays.sort(actual);

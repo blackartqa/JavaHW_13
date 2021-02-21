@@ -18,7 +18,7 @@ public class TicketManagerTest {
 
     @BeforeEach
 
-    public void setUp(){
+    public void setUp() {
         manager.add(first);
         manager.add(second);
         manager.add(third);
@@ -29,8 +29,7 @@ public class TicketManagerTest {
     }
 
     @Test
-
-    void shouldSearchAndSortByAirport(){
+    void shouldSearchAndSortByAirport() {
         String departureAirportName = "MOW";
         String arrivalAirportName = "VRN";
         Ticket[] expected = new Ticket[]{second, sixth, first, seventh, fifth};
